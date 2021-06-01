@@ -1,0 +1,125 @@
+/*pagina 2---orfanato*/
+body {
+  position: relative;
+}
+
+#page-orphanages {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#mapid {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  animation-delay: 200ms;
+}
+
+aside {
+  /*WIDTH:>>>>se esta largura esta equivalente a   300px,ao colocar um padding de 8rem(80px),
+   a minha caixa aside vai somar os 300px + 80px, fazendo uma caixa de 380px, e nao é isso que eu quero... eu tenho que reniciar esse compartamento 
+  padrao/ eu quero que ele some os dois mas nao modifique a largura determinada pelo clamp ( fui no main no seletor 
+   universal *{ e coloquei box-sizing: border-box; ) */
+
+  width: clamp(24rem, 25vh, 44rem);
+  background: linear-gradient(329.54deg, #15b6d6 0%, #15b6d6 100%);
+  padding: clamp(3rem, 5vh, 8rem);
+  /*por padrao o display flex coloca oos elementos um do lado do outro/ mas a gente reverte isso usando o  flex-direction: column;*/
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+aside h2 {
+  margin: top 6.4rem;
+  font: clamp(2rem, 5vh, 3.6rem) / 1.1 "Nunito", sans-serif;
+}
+
+aside p {
+  margin-top: 2.4rem;
+  font: 100 1.4rem/1.5 "Nunito", sans-serif;
+}
+aside footer p {
+  margin-top: 0.8rem;
+}
+
+/*regras do botao*/
+
+#btn {
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+
+  width: 6.4rem;
+  height: 6.4rem;
+
+  background: #15c3d6;
+  border: 0;
+  border-radius: 2rem;
+
+  z-index: 2;
+
+  transition: 0.3s ease-out;
+}
+#btn:hover {
+  background: #01515a;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+#btn img {
+  width: 100%;
+  transform: scale(0.4);
+}
+
+/*estilo do POPUP parde do codico esta no JS função rgba é (vermelho, verde e alfa) valores 225 para 
+o vermelho significa que ele vai ficar branco, 255 para o verde tambem vai ficar banco, 254 
+e 225 para o azul tambem vai ficar branco, 0.8(alfa significa transparencia )*/
+
+/* box-shadow é o sombreamento*/
+.leaflet-popup-content-wrapper {
+  background: rgb(225, 255, 255, 0.8);
+
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+/* balao onde esta escrito Lar*/
+.leaflet-popup-content {
+  color: #0089a5;
+  font: 600 1.8rem/1 "Nunito", sans-serif;
+  margin: 0.8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* box-shadow é o sombreamento botao   box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);*/
+.leaflet-popup-content a {
+  width: 4rem;
+  height: 4rem;
+  background: #15b6d6;
+
+  box-shadow: 17.2868px 27.6589px 41.4884px rgba(23, 142, 166, 0.16);
+  border-radius: 12px;
+  display: flex;
+
+  justify-content: space-between;
+  transition: background-color 0.2s;
+}
+/*font: 600 1.8rem/1 'Nunito', sans-serif;*/
+
+.leaflet-popup-content a:hover {
+  background: #17d6eb;
+  animation-delay: 300ms;
+}
+
+.leaflet-popup-tip {
+  display: none;
+}
+/* deixar comentado caso precisar desta classe
+.leaflet-container {
+  z-index: 5;
+}
+*/

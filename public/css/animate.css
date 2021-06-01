@@ -1,0 +1,67 @@
+/*animações do page landing*/
+
+/* Animações/ @keyframes up{ from{
+opacity: 0;
+transform: translateY(16px);
+ } ( é uma animação de subir o from é onde a animação começa e o 
+to {
+opacity: 1;
+transform: translateY(0);
+} é onde a animação termina*/
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*animação da barra lateral do orphanages.html*/
+@keyframes hight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/*aparição da pagina orphanahe.html para isso sera usado o @keyframes apper{}*/ 
+@keyframes apper{
+
+from{
+  opacity: 0;
+
+
+}
+to{
+  opacity: 1;
+
+}
+
+}
+/*classes das animações */
+/* animate up{é uma classe que recebe o nome de up/ a duração da animação é de 300 mile segundos/ como funciona o animation-fill-mode:backwards? assim que fizer a transição from e to, ele vai deixar com que as propriedades que estao no tranform e no opacity fiquem no elemento aplicado ( no que pode ser em varios como a "logo".)    */
+
+.animate-up {
+  animation-name: up;
+  animation-duration: 300ms;
+  animation-fill-mode: backwards;
+}
+/*animação da barra lateral do orphanages.html*/
+.animate-hight {
+  animation-name: hight;
+  animation-duration: 300ms;
+}
+
+/*animação de  aparecer do orphanages.html*/
+.animate-apper{
+  animation-name: appear;
+  animation-duration: 300ms;
+  animation-fill-mode: backwards;
+}

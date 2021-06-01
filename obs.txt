@@ -1,0 +1,27 @@
+ARQUIVOS HTML E CSS
+
+Neste projeto podemos observar apenas 3 paginas html, seus estilos css estao separados por categoria.
+
+ Os codigos que são repetidos varias vezes durante o processo de construção, foram dividido em varios arquivos css com o objetivo de sempre manter as coisas organizadas no seu devido lugar.
+__exemplo é o orphanages.html e o cadastre.html, que contem a mesma barra lateral, que por sua vez se encontra no asaidbar.css.
+
+>Foi encontrada varias dificuldades,principalmente ao estilizar os botões, aprendi nesse processo que nem sempre o que o tutorial diz ser o certo, realmente vai dar certo. "É ai que voce vai ter que se adaptar".
+
+Aprendi que é necessario manter um padrão exemplo class="orphanage-details". usar classes e id que dão sentido ao que esta sendo arquitetado.
+
+Em alguns arquivos HTML, foi usado a função de "onclick", ao clicar num botão realiza uma ação de ir para uma pagina ou voltar para a anterior.
+
+>Arquivos JS.
+
+Nos arquivos js foi usado mapas de um site externo, todos os arquivos estão devidamente comentado para o entendimento de todos que forem analizar esses arquivos.
+
+Este projeto tem como objetivo encontrar orfanatos no mapa, adcionar um orfanato, e agendar visitas, o que foi realizado ate agora foi o "FRONT-END", há muito a ser feito, então terá sim novas atualizações.
+
+> "layouts adaptados para estudo".
+> Embora não seja um projeto profíssional não deixa de ser uma experiencia e um  aprendizado.
+
+ASS: Francine Hollweg
+
+
+
+

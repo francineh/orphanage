@@ -1,0 +1,117 @@
+/* caixa 1 page-landing*/
+
+#page-landing {
+  background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  /* align-items: center; essa função  vai alinhar todos os itens ao centro.mas tem outro jeito de fazer a mesma coisa/ voce pega a caixa #container{ margin:auto;} essa função simplesmente vai automatizar a margem tanto em cima como embaixo, e nas laterais.*/
+}
+
+/* caixa 2 Container*/
+#container {
+  margin: auto;
+  width: min(90%, 112rem);
+}
+/* agrupamento de elementos: eu quero que entre dentro do meu elementos VISIT e procure todos os P*/
+
+.location,
+h1,
+.visit p {
+  height: 16vh;
+}
+
+/* ANIMAÇÕES DO PAGE-LANDING*/
+
+/*eu quero que as animaçoes apareçam um de cada vez para isso é preciso, é preciso separar cada um deles para receber propriedade de "TEMPO" */
+
+/* o delay é um atraso de 50 mile segundos*/
+#logo {
+  animation-delay: 50ms;
+}
+.location {
+  animation-delay: 100ms;
+}
+main h1 {
+  animation-delay: 150ms;
+}
+
+/* ANIMAÇÕES DO BOTÃO/ para que tenha uma transiçao ao passar o mouse no botao é nesessario que no visit a{ tenha uma propriedade chamada "transition:background .2s}*/
+.visit a:hover {
+  background: #96feff;
+}
+
+.visit p {
+  animation-delay: 200ms;
+}
+
+.visit a {
+  width: 8rem;
+  height: 8rem;
+  background: #ffd666;
+  border: nome;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  transition: background 200ms;
+  animation-delay: 250ms;
+}
+
+/* desktop verion= versão para desktop*/
+/* @media é uma função que tem a logica " se o min-width(largura) for ate 760px para cima aplique as seguintes regras*/
+
+@media (min-width: 750px) {
+  #container {
+    padding: rem 2rem;
+
+    /* vamos trabalhar a imagem agora/ vamos usar um shorthand background que vai receber: uma imagem/ essa imagem nao vai ter repetição entao vamos trbalhar o repeat dele,a imagem tambem vai ter um posicionamento,size.  */
+    background: url(../images/bg.svg) no-repeat 80% / clamp(30rem, 54vh, 56rem);
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .location,
+  h1,
+  .visit p {
+    height: initial;
+    text-align: initial;
+  }
+  .location {
+    text-align: right;
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+  /* font-size: clamp([4remvalor minimo], [8vw,valor ideial] [8.4rem valor maximo- se chegar a esse valor por favor nao passe disso]);
+  margin:clamp(preciso de um valor minimo, maximo e um ideal para o tamanho da tela/ assim o conteudo de adaptada ao tamanho do monitor
+  o valor ideial era pra ser de 10%, 9vw, 12%*/
+  main h1 {
+    font-size: clamp(4rem, 5vw, 8.4rem);
+    font-weight: bold;
+    line-height: 0.88;
+
+    margin: clamp(9%, 9vh, 12%) 0 4rem;
+
+    width: min(300px, 80%);
+  }
+
+  .visit {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .visit p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+    width: clamp(2orem, 20vh, 300rem);
+  }
+  .visit a {
+    margin: initial;
+  }
+}

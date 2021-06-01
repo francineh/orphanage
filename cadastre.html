@@ -1,0 +1,174 @@
+<!--
+apenas para fazer comentario
+Html 
+hypertext = hiper texto/fazer links 
+
+markup = marcação/ tag html
+
+language= linguagem, e sim tem uma sintatese = no html é apenas uma linguagem de marcação.
+-->
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastre</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!--     este script por alguns momentos(segundos) ele vai bloquear a minha aplicação
+    só que ele esta feito de uma maneira que ele nao estraga a minha aplicação
+lembrando que o HTML ele "LÊ LINHA POR LINHA" -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <link rel="icon" href="./public/images/logo-icon.png">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/cadastre.css">
+    <link rel="stylesheet" href="./public/css/asaidbar.css">
+    <link rel="stylesheet" href="./public/css/map.css">
+    <link rel="stylesheet" href="./public/css/formulario.css">
+    <link rel="stylesheet" href="./public/css/btn.css">
+    <!--aqui temos o link do font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="./public/css/animate.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--    <link href = "https://fonts.googleapis.com/css2? family = Nunito: wght @ 400; 600; 700; & display = swap" rel = "stylesheet">-->
+
+
+
+</head>
+
+<body>
+    <div id="create-orphanage">
+
+        <!--O elemento <aside> é utilizado quando precisamos criar um conteúdo de apoio/adicional ao conteúdo principal.-->
+        <aside class="animate-hight sidebar">
+
+            <img src="./public/images/map-marker.svg" alt="happy">
+
+            <!--footer é o rodapé-->
+            <footer id="container-rodape">
+                <!--onclick é uma estrategia javaScript, quando eu clicar no botao ele vai executar uma função, desntro dessa função nos temos um objeto chamado history,ele sabe o historico da sua navegação! e dentro do objeto temos uma funcionalidade é o metodo back, por isso ao clicar no botao "voltar",ele voltara para a pagina anterior  -->
+                <button id="btn-voltar" onclick="history.back()">
+                    <img src="./public/images/arrow-back.svg" alt="voltar"></button>
+            </footer>
+
+
+        </aside>
+        <!--<main>especifica o conteúdo principal e, consequentemente, de maior relevância dentro da página.-->
+        <main class="animate-appear with-sidebar">
+            <!--aqui temos um formulario/ dentro do form temos tambem blocos que sao feitos da maneira a seguir-->
+            <form action="">
+                <fieldset>
+                    <legend>Dados</legend>
+                    <div class="map-container">
+                        <div id="mapid"></div>
+
+                        <footer>
+                            <a href="#" id="select-point">Clique no mapa para adicionar a localização</a>
+                        </footer>
+
+                    </div>
+
+
+
+                    <div class="input-block">
+                        <!--name="nome"/este nome vai ser chamado la no meu back-and-->
+
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="nome">
+                    </div>
+
+                    <div class="input-block">
+                        <!--name="about"/este nome vai ser chamado la no meu back-and-->
+
+                        <label for="about">Sobre <span>Máximo de 300 catacteres</span></label>
+                        <textarea id="about" name="about"></textarea>
+                    </div>
+
+                    <div class="input-block">
+                        <!--name="whatsapp"/este nome vai ser chamado la no meu back-and-->
+
+                        <label for="whatsapp">Número de Whatsapp</label>
+                        <input id="whatsapp" type="text" name="whatsapp">
+                    </div>
+                    <!--AQUI TEMOS UM BOTAO DE ADICIONAR FOTO-->
+                    <div class="input-block images">
+                        <!--name="images"/este nome vai ser chamado la no meu back-and-->
+
+                        <label for="images">Foto</label>
+                        <div class="images-upload" id="images">
+
+                            <!--AQUI TEMOS UMA LISTA DE FOTOS -->
+                            <div class="new-upload">
+
+
+                                <input name="images" placeholder="Cole o link da foto aqui">
+                                <span ><img src="./public/images/fechar.png" alt="remover foto">
+                                </span>
+
+
+
+                            </div>
+
+                            <button class="button" id="button" type="button">
+                                <img src="./public/images/plus.svg">
+
+                            </button>
+
+                        </div>
+
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Visitação</legend>
+
+                    <div class="input-block">
+                        <!--name="instructions"/este nome vai ser chamado la no meu back-and-->
+
+                        <label for="instructions">Instruções</label>
+                        <textarea id="instructions" name="instructions"></textarea>
+                    </div>
+
+
+                    <div class="input-block">
+                        <!--name="opening_hours"/este nome vai ser chamado la no meu back-and-->
+
+                        <label for="opening_hours">Horário das visitas</label>
+                        <input id="opening_hours" type="text" name="opening_hours">
+                    </div>
+                    <div class="input-block">
+
+                        <label for="open_on_wekends">Aberto nos finais de semanas?</label>
+                        <input id="open_on_wekends" type="hidden" name="open_on_wekends" value="1">
+
+                    </div>
+                    <div class="button-select">
+                        <button type="button" class="active">Sim</button>
+                        <button type="button" class="active">Não</button>
+                    </div>
+
+                    <div class="btn-whatsapp">
+                        <button class="btn2 botao" type="submit">Confirmar</button>
+
+
+                    </div>
+
+                </fieldset>
+
+            </form>
+        </main>
+
+    </div>
+
+
+    <script src=" ./public/scripts/create.js"></script>
+</body>
+
+</html>

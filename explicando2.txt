@@ -1,0 +1,53 @@
+resolvendo  problemas com o botao na pagina orphanage.html
+
+no html foi criado um tag <a>para quando ao clicar  no botao a pagina direcione para a pagina cadastro</>
+ 
+  <a  href="cadastre.html" title="cadastre">
+            <img src="./public/images/plus.svg" alt="Ir para o cadastro">
+          </a>
+Primeiramente colocamos a div btn que é= a botao fora de todas as outras divs. ficando dentro do body{}.
+no css coloquei um elemento css body{position: relative;}.
+
+#btn {
+  position: absolute;
+  /* left: ; /
+  / top /
+  bottom: 4rem;
+  right: 4rem;
+
+  width: 6.4rem;
+  height: 6.4rem;
+
+  background: #15c3d6;
+  border: none;
+  border-radius: 2rem;
+
+  z-index: 2;
+
+  / propriedade que faz com que a transicão seja suave. 
+  É usado diretamente no botão para que ela se aplique tanto
+  na mudanca (hover) quanto na volta para o padrão */
+  transition: 0.3s ease-out;
+}
+
+#btn:hover {
+  background: #0498a8;
+  transform: scale(1.3);
+  cursor: pointer;
+}
+esta regra css mudou a imagem, centralizando deixando no tamanho correto e etc.
+#btn img
+{
+  width: 100%;
+  transform: scale(0.4);
+}
+
+
+
+
+
+
+
+
+
+ 

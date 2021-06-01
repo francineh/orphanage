@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  *box-sizing: border-box;
+
+  }
+
+  body{
+  
+  height: 100vh; 
+  color:white;
+  background: #ebf2f5;
+}  
+
+/* o "rem" e o "em", sao calculos de medida que torna a 
+
+minha pagina responssivo/ e o 62.5% é equivalente a 
+
+10px */
+:root{font: size 62.5%;}
+/* body,imput,button,textarea{todas as propriedades 
+
+colocadas aqui serão aplicadas ao 
+
+"body,imput,button,textarea", isso tudo seria uma 
+
+especie de agrupamento}*/
+body,imput,button,textarea{
+/*  font-size: 400;
+  font-size: 18px;
+  line-height: 1;
+  font family: 'Nunito', sans-serif;
+ font:400 18px/1 'Nunito', sans-serif;[esta regra 
+
+sobscreve todas as regras acima]
+  */  
+  font:400 1.5rem/1. 'Nunito', sans-serif;
+}
+
+
+

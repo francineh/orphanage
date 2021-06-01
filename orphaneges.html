@@ -1,0 +1,162 @@
+<!--
+apenas para fazer comentario
+Html 
+hypertext = hiper texto/fazer links 
+
+markup = marcação/ tag html
+
+language= linguagem, e sim tem uma sintatese = no html é apenas uma linguagem de marcação.
+-->
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lar das Crianças</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!--     este script por alguns momentos(segundos) ele vai bloquear a minha aplicação
+    só que ele esta feito de uma maneira que ele nao estraga a minha aplicação
+lembrando que o HTML ele "LÊ LINHA POR LINHA" -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <link rel="icon" href="./public/images/logo-icon.png">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <link rel="stylesheet" href="./public/css/asaidbar.css">
+    <link rel="stylesheet" href="./public/css/map.css">
+    <link rel="stylesheet" href="./public/css/orfanato.css">
+    <link rel="stylesheet" href="./public/css/btn.css">
+<!--aqui temos o link do font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="./public/css/animate.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!--    <link href = "https://fonts.googleapis.com/css2? family = Nunito: wght @ 400; 600; 700; & display = swap" rel = "stylesheet">-->
+
+
+
+</head>
+
+<body>
+    <div id="pageorphanage">
+
+        <!--O elemento <aside> é utilizado quando precisamos criar um conteúdo de apoio/adicional ao conteúdo principal.-->
+        <aside class="animate-hight sidebar">
+
+            <img src="./public/images/map-marker.svg" alt="happy">
+
+            <!--footer é o rodapé-->
+            <footer id="container-rodape">
+                <!--onclick é uma estrategia javaScript, quando eu clicar no botao ele vai executar uma função, desntro dessa função nos temos um objeto chamado history,ele sabe o historico da sua navegação! e dentro do objeto temos uma funcionalidade é o metodo back, por isso ao clicar no botao "voltar",ele voltara para a pagina anterior  -->
+                <button id="btn-voltar" onclick="history.back()">
+                    <img src="./public/images/arrow-back.svg" alt="voltar"></button>
+            </footer>
+
+
+        </aside>
+        <!--<main>especifica o conteúdo principal e, consequentemente, de maior relevância dentro da página.-->
+        <main class="animate-appear with-sidebar">
+
+            <div class="orphanage-details">
+                <!--dentro desta div vamos ter uma foto grande-->
+                <img src="./public/images/filhos.jpg" alt="lar das meninas">
+
+                <div class="imagens">
+                    <!--dentro desta div vamos ter uma serie de fotos-->
+                    <!--ao clicar no botao eu crio um evento,que é o evento de click-->
+                    <!--exemplo de como puxar uma foto direto do google...  <img src="https://source.unsplash.com/random/?id=1" alt="lar das meninas" </button>-->
+                    <button onclick="selectimage(event)" class="active" type="button">
+                        <img src="./public/images/bebe.jpg"" alt="lar das meninas" </button>
+                        <button onclick="selectimage(event)" type="button">
+                            <img src="./public/images/cdino.jpg" alt="lar das meninas" </button>
+                            <button onclick="selectimage(event)" type="button">
+                                <img src="./public/images/cria.jpg" alt="lar das meninas" </button>
+                                <button onclick="selectimage(event)" type="button">
+                                    <img src="./public/images/cria2.jpg" alt="lar das meninas" </button>
+                                    <button onclick="selectimage(event)" type="button">
+                                        <img src="./public/images/filhos.jpg" alt="lar das meninas" </button>
+                                        <button onclick="selectimage(event)" type="button">
+                                            <img src="./public/images/nene.jpg" alt="lar das meninas" </button>
+
+
+
+                </div>
+
+                <div class="orphanage-details-content">
+                    <!--dentro desta div vamos ter titulo, uma descrição, um mapa,uma linha, um subtitulo, mais um texto, e dois "mostrando informação 
+    e um botao de contato"-->
+                    <h1> Lar das crianças</h1>
+
+                    <p>
+                        Presta assistencia a crianças de 0 a 15 anos que se encontre em situação de risco e/ou
+                        vulnerabilidade social.
+                    </p>
+
+                    <div class="map-container">
+
+                        <!--dentro desta div vamos ter um mapa-->
+                        <div id="mapid"></div>
+
+                        <footer>
+                            <a href="#">ver rotas no Google maps</a>
+                        </footer>
+
+                    </div>
+                    <!--o <hr> é uma linha padrao no css-->
+                    <hr>
+                    <!--subtitulo-->
+
+                    <h2>Instruções para sua visita</h2>
+                    <!--segundo paragrafo-->
+                    <p>Venha como se sentir a vontade, e traga muito amor e carinho para dar</p>
+
+                    <div class="open-details">
+                        <!--esta div serve para mostrar quando estaremos abertos/ aqui serao feitos duas divs (hour= HORA) -->
+                        <div class="hour">
+                            <!--esta div vai receber uma imagem-->
+                            <img src="./public/images/clock.svg" alt="horarios">
+                            <p class="visitar">horario de visita segunda a sexta das 08:00 as 18:00</p>
+
+
+                        </div>
+                        <!--aberto nos finais de semana -->
+                        <div class="open-on-weekends">
+
+                            <img src="./public/images/info.svg" alt="informaçoes">
+                            atendemos nos finais de semana</img>
+
+
+                        </div>
+                        <!--aqui temos um botao/ foi usado o Font Awesome para colocar o icon do whats-->
+
+                        <div class="btn-whatsapp">
+                        <button class="btn2 botao" type="button">
+                            <i class="fab fa-whatsapp ">  Chamar no Whatsapp</i>
+
+                    </button>
+                        
+
+                    </div>       
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+    </div>
+
+    </main>
+
+    </div>
+
+
+    <script src=" ./public/scripts/page-orfanato.js"></script>
+</body>
+
+</html>

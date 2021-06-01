@@ -1,0 +1,50 @@
+/*BARRA LATERAL/corresponde as paginas cadastre.html e orphanages.html */
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    padding: 32px 24px; /*3.2rem 2.4rem;*/
+    background: #15c3d6;
+  }
+  /*
+  display:flex;
+   
+  flex-direction: column;
+   justify-content:space-between;
+   align-items:center;
+   
+   isso nao funciona nos meus botões */
+  
+  /*REGRAS DO BOTAO*/
+  #btn-voltar {
+    position: absolute;
+    bottom: 4rem;
+  
+    width: 48px;
+    height: 48px;
+  
+    background: #15c3d6;
+  
+    border-radius: 1.6rem;
+  
+    transition: 0.3s ease-out;
+  }
+  
+  #btn-voltar:hover {
+    background: #01515a;
+    transform: scale(1.3);
+    cursor: pointer;
+  }
+  
+  #btn-voltar img {
+    width: 100%;
+  
+    border: none;
+    text-align: center;
+    transform: scale(0.4);
+  }
+  /* esta classe se encontra no meu main..e simplesmente afasta meu conteudo da barra lateral fixa*/
+  
+  .with-sidebar {
+    padding-left: 110px;
+  }
